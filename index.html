@@ -3,18 +3,25 @@
 <style>
 
     body {
-        background-color: rgb(20,20,20);
-        font-family: monospace;
-
-        /* Resets the margin so browser css is ignored - Makes navigation bar tight to screen*/
-        margin: 0;
-    }
-
-
-    p
-    {
         font-size: 16px;
         color: white;
+        background-color: rgb(20,20,20);
+        font-family: monospace;
+        text-align:center;
+        /* Resets the margin so browser css is ignored - Makes navigation bar tight to screen*/
+        width: 30%;
+        height: auto;
+        margin: auto;
+        padding-top: 2%;
+    }
+
+    h1
+    {
+
+    }
+    p
+    {
+
     }
     a
     {
@@ -22,6 +29,13 @@
         color: blue;
     }
 
+    ul {
+        display: inline-block;
+    }
+    li
+    {
+      text-align:left;
+    }
     /* Navigation bar styles*/
     /* Add a black background color to the nav bar*/
     .navbar
@@ -58,58 +72,51 @@
         top: 0;
         width: 100%;
     }
+
+    .boxed
+    {
+        background-color: rgb(95, 95, 95);
+            border: 1px solid grey;
+    }
 </style>
 
 <html>
-<body>
+<body class="">
+    <div class="boxed">
     <!-- Top navigation bar code-->
     <div class="navbar">
-        <a href="#home-div">Home</a>
+        <!--<a href="#home-div">Home</a>
         <a href="#projects-div">Projects</a>
-        <a href="#contact-div">Contact</a>
-        <a href="#about-div">About</a>
+        <a href="#about-div">About</a>-->
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="https://docs.google.com/document/d/1i5CHPTLoUeXdabAKHejeOzc8EcxaCZQhpd3zIt7ptcw/edit?usp=sharing">CV</a>
+        <a href="contact.html">Contact</a>
     </div>
 
     <!-- Home Page-->
     <div id="home-div">
-        <p> Hi, I'm Jack Fletcher!</p>
+        <h1>Home</h1>
+        <p> Hi, I'm Jack Fletcher! This site's currently in progress, as I'm learning full-stack development through the Odin Project and Freecodecamp.</p>
+        <br />
+        <p> My Current skills are:</p>
+        <ul>
+            <li> Unity</li>
+            <li> C#</li>
+            <li> Java</li>
+            <li> Matlab</li>
+            <li> Blender</li>
+            <li> Project Management</li>
+        </ul>
+
+        <br />
+        <!--<p> Recent Tweets:</p>
+        <a class="twitter-timeline" data-width=100% data-height=500 data-theme="dark" href="https://twitter.com/JackFle07795733?ref_src=twsrc%5Etfw">Tweets by JackFle07795733</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
     </div>
+        </div>
 
-    <br />
-    <!-- Projects Page-->
-    <div id="projects-div">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper vel sapien vel rutrum. Mauris condimentum nulla dignissim aliquet dictum. Etiam pretium, nunc quis ullamcorper hendrerit, lectus orci mollis sem, id tristique neque dui id orci. Aliquam fermentum elementum felis quis pulvinar. Etiam in iaculis sem. Maecenas semper nec ipsum in accumsan. Praesent pretium tristique ante, tincidunt mattis ipsum iaculis quis. Vivamus sagittis tortor tortor, eget dapibus lectus maximus id. Quisque a nibh et purus varius rhoncus. In a tellus lorem. Proin posuere maximus euismod. Proin sit amet imperdiet ante. Vivamus pharetra erat odio, ut sollicitudin lectus aliquet at. Vestibulum vel libero non eros venenatis vulputate. Cras auctor posuere lorem a consequat. Vivamus eros dui, pharetra sed ultrices eget, rhoncus ac leo.
-        </p>
-
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper vel sapien vel rutrum. Mauris condimentum nulla dignissim aliquet dictum. Etiam pretium, nunc quis ullamcorper hendrerit, lectus orci mollis sem, id tristique neque dui id orci. Aliquam fermentum elementum felis quis pulvinar. Etiam in iaculis sem. Maecenas semper nec ipsum in accumsan. Praesent pretium tristique ante, tincidunt mattis ipsum iaculis quis. Vivamus sagittis tortor tortor, eget dapibus lectus maximus id. Quisque a nibh et purus varius rhoncus. In a tellus lorem. Proin posuere maximus euismod. Proin sit amet imperdiet ante. Vivamus pharetra erat odio, ut sollicitudin lectus aliquet at. Vestibulum vel libero non eros venenatis vulputate. Cras auctor posuere lorem a consequat. Vivamus eros dui, pharetra sed ultrices eget, rhoncus ac leo.
-        </p>
-
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper vel sapien vel rutrum. Mauris condimentum nulla dignissim aliquet dictum. Etiam pretium, nunc quis ullamcorper hendrerit, lectus orci mollis sem, id tristique neque dui id orci. Aliquam fermentum elementum felis quis pulvinar. Etiam in iaculis sem. Maecenas semper nec ipsum in accumsan. Praesent pretium tristique ante, tincidunt mattis ipsum iaculis quis. Vivamus sagittis tortor tortor, eget dapibus lectus maximus id. Quisque a nibh et purus varius rhoncus. In a tellus lorem. Proin posuere maximus euismod. Proin sit amet imperdiet ante. Vivamus pharetra erat odio, ut sollicitudin lectus aliquet at. Vestibulum vel libero non eros venenatis vulputate. Cras auctor posuere lorem a consequat. Vivamus eros dui, pharetra sed ultrices eget, rhoncus ac leo.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper vel sapien vel rutrum. Mauris condimentum nulla dignissim aliquet dictum. Etiam pretium, nunc quis ullamcorper hendrerit, lectus orci mollis sem, id tristique neque dui id orci. Aliquam fermentum elementum felis quis pulvinar. Etiam in iaculis sem. Maecenas semper nec ipsum in accumsan. Praesent pretium tristique ante, tincidunt mattis ipsum iaculis quis. Vivamus sagittis tortor tortor, eget dapibus lectus maximus id. Quisque a nibh et purus varius rhoncus. In a tellus lorem. Proin posuere maximus euismod. Proin sit amet imperdiet ante. Vivamus pharetra erat odio, ut sollicitudin lectus aliquet at. Vestibulum vel libero non eros venenatis vulputate. Cras auctor posuere lorem a consequat. Vivamus eros dui, pharetra sed ultrices eget, rhoncus ac leo.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper vel sapien vel rutrum. Mauris condimentum nulla dignissim aliquet dictum. Etiam pretium, nunc quis ullamcorper hendrerit, lectus orci mollis sem, id tristique neque dui id orci. Aliquam fermentum elementum felis quis pulvinar. Etiam in iaculis sem. Maecenas semper nec ipsum in accumsan. Praesent pretium tristique ante, tincidunt mattis ipsum iaculis quis. Vivamus sagittis tortor tortor, eget dapibus lectus maximus id. Quisque a nibh et purus varius rhoncus. In a tellus lorem. Proin posuere maximus euismod. Proin sit amet imperdiet ante. Vivamus pharetra erat odio, ut sollicitudin lectus aliquet at. Vestibulum vel libero non eros venenatis vulputate. Cras auctor posuere lorem a consequat. Vivamus eros dui, pharetra sed ultrices eget, rhoncus ac leo.
-        </p>
-    </div>
-    <br />
-
-    <!-- Contacts Page-->
-    <div id="contact-div">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper vel sapien vel rutrum. Mauris condimentum nulla dignissim aliquet dictum. Etiam pretium, nunc quis ullamcorper hendrerit, lectus orci mollis sem, id tristique neque dui id orci. Aliquam fermentum elementum felis quis pulvinar. Etiam in iaculis sem. Maecenas semper nec ipsum in accumsan. Praesent pretium tristique ante, tincidunt mattis ipsum iaculis quis. Vivamus sagittis tortor tortor, eget dapibus lectus maximus id. Quisque a nibh et purus varius rhoncus. In a tellus lorem. Proin posuere maximus euismod. Proin sit amet imperdiet ante. Vivamus pharetra erat odio, ut sollicitudin lectus aliquet at. Vestibulum vel libero non eros venenatis vulputate. Cras auctor posuere lorem a consequat. Vivamus eros dui, pharetra sed ultrices eget, rhoncus ac leo.
-        </p>
-    </div>
-    <br />
-
-    <!-- About Page-->
-    <div id="about-div">
-
-    </div>
 </body>
 </html>
 
