@@ -1,48 +1,163 @@
 ﻿<!DOCTYPE html>
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Jack-fletcher.github.io</title>
 
     <html>
 
     <head>
         <link rel='stylesheet' type='text/css' href='styles.css' />
     </head>
-
     <body class="">
-        <div class="boxed">
             <!-- Top navigation bar code-->
             <div class="navbar">
-                <!--<a href="#home-div">Home</a>
+                <a href="#home-div">Home</a>
                 <a href="#projects-div">Projects</a>
-                <a href="#about-div">About</a>-->
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
+                <a href="#about-div">About</a>
                 <a href="https://docs.google.com/document/d/1i5CHPTLoUeXdabAKHejeOzc8EcxaCZQhpd3zIt7ptcw/edit?usp=sharing">CV</a>
-                <a href="contact.html">Contact</a>
+                <a href="#contact">Contact</a>
             </div>
 
             <!-- Home Page-->
             <div id="home-div">
-                <h1>Home</h1>
-                <p> Hi, I'm Jack Fletcher! This site's currently in progress, as I'm learning full-stack development through the Odin Project and Freecodecamp. I'm a third-year student at Plymouth University, Devon studying Computing & Games Development. I've recently created projects such as <a href="projects.html#Dhelve"> Dhelve</a>, 
-                  a procedurally generated dungeon crawler, <a href="projects.html#Highway_Hero"> Highway Hero</a>, an endless runner, and have done client work for <a href="projects.html#PEC_App"> Plymouth Energy Community</a></p>
-                <br />
-                <p> My Current skills are:</p>
-                <ul>
-                    <li> Unity</li>
-                    <li> C#</li>
-                    <li> Java</li>
-                    <li> Matlab</li>
-                    <li> Blender</li>
-                    <li> Project Management</li>
-                </ul>
+                <h1>I'm Jack Fletcher</h1>
+                <hr width="300px" />
+                <p> Software Engineer and Game Designer.</p>
 
+                <p>
+                    Hi, I'm Jack Fletcher! This site's currently in progress, as I'm learning full-stack development through the Odin Project and Freecodecamp. I'm a third-year student at Plymouth University, Devon studying Computing & Games Development. I've recently created projects such as <a href="projects.html#Dhelve"> Dhelve</a>,
+                    a procedurally generated dungeon crawler, <a href="projects.html#Highway_Hero"> Highway Hero</a>, an endless runner, and have done client work for <a href="projects.html#PEC_App"> Plymouth Energy Community</a>
+                </p>
                 <br />
-                <!--<a class="twitter-timeline" data-width=100% data-height=500 data-theme="dark" href="https://twitter.com/JackFle07795733?ref_src=twsrc%5Etfw">Tweets by JackFle07795733</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+                <!-- End Home Page-->
+                <br />
+
+                <!-- Projects Page-->
+                <div class="projects-div">
+                    <h1> Projects </h1>
+                    <h2 id="PEC_App">
+                        Plymouth Energy Community Damp and Mould Application (C#)
+                    </h2>
+                    <div class="outer">
+                        <div class="inner">
+                            <iframe src="https://www.youtube.com/embed/peUFRWXIwuk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <h2>What did I do?</h2>
+                    <ul>
+                        <li> UI Design and creation within the Unity Game Engine</li>
+                        <li> Lead scrums as the project lead/product owner</li>
+                        <li> Code Review for the team using Git</li>
+                    </ul>
+                    <h3> What was it? </h3>
+                    <p> The Damp and Mould application was a project developed within the Unity engine, given to us by Plymouth Energy Community, in order to make it easier to get information to homeowners who may be struggling with damp and mould within their home. It was meant to be used as an aid while visiting these people, who may learn better from a visual representation of the issues that their actions or inactions may cause. Colours and fonts were reused from the clients own website, to provide a fluid and consistent approach.</p>
+
+                    <h2 id="Highway_Hero">
+                        Highway Hero (C#)
+                    </h2>
+
+                    <div class="outer">
+                        <div class="inner">
+                            <iframe src="https://www.youtube.com/embed/XqZYr33nLRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <h2>What did I do?</h2>
+                    <ul>
+                        <li> Developed persistent data storage for coins/purchased cars</li>
+                        <li> Created a basic character stats system</li>
+                        <li> Created a movement system for the game in the style of endless runners such as Temple Run</li>
+
+                    </ul>
+                    <h3> What was it? </h3>
+                    <p> An endless runner developed in 3 months as my first introduction to 3D game development within the Unity Engine. It featured endless gameplay, getting progressively more difficult, persistent data storage and a set of cars with different character stats. </p>
+
+                    <h2 id="Dhelve">
+                        Dhelve (C#)
+                    </h2>
+
+                    <div class="outer">
+                        <div class="inner">
+                            <iframe src="https://www.youtube.com/embed/fFcQS0qFXKE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <h2>What did I do?</h2>
+                    <ul>
+                        <li> Developed persistent data storage for coins/items</li>
+                        <li> Created a basic RPG character stats system, including levels, experience and stats</li>
+                        <li> Created a movement system</li>
+                        <li> Carried out user testing</li>
+                        <li> Created supporting documents - Standard Operating Procedures, Technical Document, Design Document, Risk Assessment</li>
+                        <li> Admin'd the github repo - Dealt with any merge conflicts and did all code review</li>
+                        <li> Created a basic character controller</li>
+
+                    </ul>
+                    <h3> What was it? </h3>
+                    <p> A procedurally generated dungeon crawler, created in three months as part of a team of two. It featured an inventory system, with a shop for purchaseable items and monster drop tables, with a fully-fledged character stats system for unlimited replayability.   </p>
+                </div>
+                <!-- End Projects page-->
+                <!-- About Page-->
+                <div id="about-div">
+                    <h1> About Me</h1>
+                    <p>
+                        With an education consisting mostly of game development, my professional skills reflect this. I have several years of experience with C#, a year of experience with Java, and I'm currently learning HTML/Javascript/Ruby. Outside of education, I like all kinds of games, including board games such as Settlers of Catan, card games like Yu-Gi-Oh and
+                        Magic The Gathering, and Video Games such as Counter-Strike: Global Offensive.
+                        I love tinkering with different ideas to see how they work, and I can guarantee I'll get excited for any idea you give to me.
+                        One of my passion projects involves creating a Discord bot for a small community that's used semi regularly, including an sql database for daily coins/interaction. I enjoy building computers, having built the last three I own, and several for friends and family.
+                    </p>
+
+                    <h2>My Skills</h2>
+                    <hr width="150px" />
+                    <div class="SkillList">
+                    <ul>
+                        <li> Unity</li>
+                        <li> C#</li>
+                        <li> Java</li>
+                        <li> Matlab</li>
+                        <li> Blender</li>
+                        <li> Project Management</li>
+                    </ul>
+                     </div>
+                    <br />
+
+                    <!-- End About Page-->
+                    <!-- Contacts Page-->
+                    <div id="contact-div">
+                        <h1> Contact Me:</h1>
+                        <p> My social media links are here:</p>
+                        <a href="https://twitter.com/JackFle07795733"> <img border="0" src="icons/twitter.png" width="25" height="25"> </a>
+                        <a href="https://www.facebook.com/jack.fletcher.3382"> <img border="0" src="icons/facebook.png" width="25" height="25"> </a>
+                        <!-- <a href="https://twitter.com/JackFle07795733"> <img border="0" src="icons/instagram.png" width="25" height="25"> </a>-->
+                        <a href="https://www.linkedin.com/in/jack-fletcher-977755171/"> <img border="0" src="icons/linkedin.png" width="25" height="25"> </a>
+                        <a href="https://www.youtube.com/channel/UCEJhnKMMkbA9d4mDoQHUnsg?view_as=subscriber"> <img border="0" src="icons/youtube.png" width="25" height="25"> </a>
+                        <p>
+                            Or send me an email!
+                        </p>
+                        <br />
+                        <form action="mailto:Jackfletch4@gmail.com" method="post" enctype="text/plain">
+                            Name:<br />
+                            <input type="text" name="name" />
+                            <br />
+                            Email:
+                            <br />
+                            <input type="text" name="mail" />
+                            <br />
+                            Comment:
+                            <br />
+                            <input type="text" name="comment" /><br />
+                            <br />
+
+                            <input type="submit" value="Send" />
+                            <input type="reset" value="Reset" />
+
+                        </form>
+                    </div>
+                    <!-- End Contacts Page-->
+                    <!--<a class="twitter-timeline" data-width=100% data-height=500 data-theme="dark" href="https://twitter.com/JackFle07795733?ref_src=twsrc%5Etfw">Tweets by JackFle07795733</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+                </div>
             </div>
-        </div>
 
     </body>
 </html>
