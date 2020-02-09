@@ -1,138 +1,49 @@
-<!DOCTYPE html>
-
-<style>
-
-    body {
-        font-size: 16px;
-        color: white;
-        background-color: rgb(20,20,20);
-        font-family: monospace;
-        text-align: center;
-        /* Resets the margin so browser css is ignored - Makes navigation bar tight to screen*/
-        width: 30%;
-        height: auto;
-        margin: auto;
-        padding-top: 2%;
-        padding-bottom: 2%;
-    }
-
-    h1
-    {
-
-    }
-    p
-    {
-
-    }
-    a
-    {
-        font-size: 16px;
-        color: blue;
-    }
-
-    ul {
-        display: inline-block;
-    }
-    li
-    {
-      text-align:left;
-    }
-    /* Navigation bar styles*/
-    /* Add a black background color to the nav bar*/
-    .navbar
-    {
-        background-color: rgb(0,0,0);
-        overflow: hidden;
-        margin:0;
-        padding: 0;
-    }
-    /* Style the links inside the nav bar*/
-    .navbar a
-    {
-        font-family: monospace;
-        float: left;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
+﻿<!DOCTYPE html>
 
 
-    }
 
-    .navbar a:hover 
-    {
-            background-color: rgb(128, 128, 128);
-            color: white;
+    <html>
 
-    }
+    <head>
+        <link rel='stylesheet' type='text/css' href='styles.css' />
+    </head>
 
-    .sticky
-    {
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
+    <body class="">
+        <div class="boxed">
+            <!-- Top navigation bar code-->
+            <div class="navbar">
+                <!--<a href="#home-div">Home</a>
+                <a href="#projects-div">Projects</a>
+                <a href="#about-div">About</a>-->
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="https://docs.google.com/document/d/1i5CHPTLoUeXdabAKHejeOzc8EcxaCZQhpd3zIt7ptcw/edit?usp=sharing">CV</a>
+                <a href="contact.html">Contact</a>
+            </div>
 
-    .boxed
-    {
-        background-color: rgb(95, 95, 95);
-            border: 1px solid grey;
-    }
-</style>
+            <!-- Home Page-->
+            <div id="home-div">
+                <h1>Home</h1>
+                <p> Hi, I'm Jack Fletcher! This site's currently in progress, as I'm learning full-stack development through the Odin Project and Freecodecamp. I'm a third-year student at Plymouth University, Devon studying Computing & Games Development. I've recently created projects such as <a href="projects.html#Dhelve"> Dhelve</a>, 
+                  a procedurally generated dungeon crawler, <a href="projects.html#Highway_Hero"> Highway Hero </a> and have done client work for <a href="projects.html#PEC_App"> Plymouth Energy Community</a></p>
+                <br />
+                <p> My Current skills are:</p>
+                <ul>
+                    <li> Unity</li>
+                    <li> C#</li>
+                    <li> Java</li>
+                    <li> Matlab</li>
+                    <li> Blender</li>
+                    <li> Project Management</li>
+                </ul>
 
-<html>
-<body class="">
-    <div class="boxed">
-    <!-- Top navigation bar code-->
-    <div class="navbar">
-        <!--<a href="#home-div">Home</a>
-        <a href="#projects-div">Projects</a>
-        <a href="#about-div">About</a>-->
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="https://docs.google.com/document/d/1i5CHPTLoUeXdabAKHejeOzc8EcxaCZQhpd3zIt7ptcw/edit?usp=sharing">CV</a>
-        <a href="contact.html">Contact</a>
-    </div>
-
-    <!-- Home Page-->
-    <div id="home-div">
-        <h1>Home</h1>
-        <p> Hi, I'm Jack Fletcher! This site's currently in progress, as I'm learning full-stack development through the Odin Project and Freecodecamp.</p>
-        <br />
-        <p> My Current skills are:</p>
-        <ul>
-            <li> Unity</li>
-            <li> C#</li>
-            <li> Java</li>
-            <li> Matlab</li>
-            <li> Blender</li>
-            <li> Project Management</li>
-        </ul>
-
-        <br />
-        <!--<p> Recent Tweets:</p>
-        <a class="twitter-timeline" data-width=100% data-height=500 data-theme="dark" href="https://twitter.com/JackFle07795733?ref_src=twsrc%5Etfw">Tweets by JackFle07795733</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
-    </div>
+                <br />
+                <!--<a class="twitter-timeline" data-width=100% data-height=500 data-theme="dark" href="https://twitter.com/JackFle07795733?ref_src=twsrc%5Etfw">Tweets by JackFle07795733</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+            </div>
         </div>
 
-</body>
+    </body>
 </html>
 
-
-<script>
-    window.onscroll = function () { myFunction() };
-
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-
-    function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
-</script>
