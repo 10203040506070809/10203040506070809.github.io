@@ -10,6 +10,10 @@ body {
     height: auto;
 }
 
+#home-div{
+padding-top: 30px;
+}
+
 h1 {
     padding-left: 5%;
     padding-right: 5%;
@@ -36,7 +40,9 @@ ul {
     background-color: rgb(20,20,20);
     overflow: hidden;
     margin: 0;
-    padding: 0;
+    
+    /* ensure its always on top*/
+    z-index:999;
 }
     /* Style the links inside the nav bar*/
     .navbar a {
@@ -54,11 +60,14 @@ ul {
             color: white;
         }
 
+        
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
 }
+
+
 
 /*Makes videos stay 16:9 at different resolutions*/
 .outer {

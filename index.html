@@ -7,14 +7,14 @@
     <head>
         <link rel='stylesheet' type='text/css' href='styles.css' />
     </head>
-    <body class="">
+    <body class="content">
             <!-- Top navigation bar code-->
-            <div class="navbar">
+            <div id="navbar"class="navbar">
                 <a href="#home-div">Home</a>
                 <a href="#projects-div">Projects</a>
                 <a href="#about-div">About</a>
                 <a href="https://docs.google.com/document/d/1i5CHPTLoUeXdabAKHejeOzc8EcxaCZQhpd3zIt7ptcw/edit?usp=sharing">CV</a>
-                <a href="#contact">Contact</a>
+                <a href="#contact-div">Contact</a>
             </div>
 
             <!-- Home Page-->
@@ -28,6 +28,7 @@
                     a procedurally generated dungeon crawler, <a href="projects.html#Highway_Hero"> Highway Hero</a>, an endless runner, and have done client work for <a href="projects.html#PEC_App"> Plymouth Energy Community</a>
                 </p>
                 <br />
+            </div>
                 <!-- End Home Page-->
                 <br />
 
@@ -110,17 +111,17 @@
                     <h2>My Skills</h2>
                     <hr width="150px" />
                     <div class="SkillList">
-                    <ul>
-                        <li> Unity</li>
-                        <li> C#</li>
-                        <li> Java</li>
-                        <li> Matlab</li>
-                        <li> Blender</li>
-                        <li> Project Management</li>
-                    </ul>
-                     </div>
+                        <ul>
+                            <li> Unity</li>
+                            <li> C#</li>
+                            <li> Java</li>
+                            <li> Matlab</li>
+                            <li> Blender</li>
+                            <li> Project Management</li>
+                        </ul>
+                    </div>
                     <br />
-
+                </div>
                     <!-- End About Page-->
                     <!-- Contacts Page-->
                     <div id="contact-div">
@@ -156,9 +157,22 @@
                     <!-- End Contacts Page-->
                     <!--<a class="twitter-timeline" data-width=100% data-height=500 data-theme="dark" href="https://twitter.com/JackFle07795733?ref_src=twsrc%5Etfw">Tweets by JackFle07795733</a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
-                </div>
-            </div>
+
 
     </body>
 </html>
 
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>

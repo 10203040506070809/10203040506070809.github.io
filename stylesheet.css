@@ -1,0 +1,194 @@
+/* TODO: Design for mobile first, desktop after. This means replacing max-width with min-width.*/
+
+html {
+    scroll-behavior: smooth;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.bgimg {
+    background-image: url("assets/images/bg2.jpeg");
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {}
+
+p {
+    font-size: 20px;
+}
+
+#navigation {
+    overflow: hidden;
+    margin: 0;
+    /* ensure its always on top*/
+    z-index: 999;
+    width: 100%;
+}
+
+#navigation a {
+    position: relative;
+    float: left;
+    color: white;
+    padding: 25px 50px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+#navigation a:hover {
+    color: orange;
+}
+
+#navigation select {
+    display: none;
+}
+
+
+/*  If the screen is less than 800px, this happens*/
+
+@media (max-width: 800px) {
+    #navigation a {
+        font-size: 20px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    #navigation a {
+        display: none;
+    }
+    #navigation select {
+        display: inline-block;
+    }
+    .Skills h2 {
+        font-size: 20px;
+    }
+    .Skills li {
+        font-size: 15px;
+    }
+}
+
+.sectionTitle:hover {
+    color: orange;
+}
+
+
+/*  End If the screen is less than 800px, this happens*/
+
+.title {
+    text-align: center;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title hr {
+    width: 200px;
+}
+
+.pagecontainer {
+    min-height: 100%;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#Skills {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Skills {
+    width: 100%;
+    display: inline-block;
+}
+
+.Tools {
+    width: 33%;
+    float: left;
+}
+
+.Languages {
+    width: 33%;
+    float: left;
+}
+
+.Software {
+    width: 33%;
+    float: left;
+}
+
+#titleHover:hover {
+    color: orange;
+}
+
+
+/*Makes videos stay 16:9 at different resolutions*/
+
+.outer {
+    margin: auto;
+    max-width: 1280px;
+    max-height: 720px;
+    width: 100%;
+    height: 100%;
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 52.5%;
+}
+
+.inner iframe {
+    float: left;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*End Makes videos stay 16:9 at different resolutions*/
+
+.mainContent {
+    text-align: center;
+    top: 50%;
+    margin-bottom: 50px;
+}
+
+ul {
+    text-align: left;
+    display: inline-block;
+}
+
+.mainContent p {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}

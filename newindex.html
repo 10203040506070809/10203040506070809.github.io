@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Jack-fletcher.github.io</title>
+
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158683896-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158683896-1');
+    </script>
+
+    <link rel='stylesheet' type='text/css' href='stylesheet.css' />
+
+</head>
+
+<body>
+    <section class="pagecontainer">
+        <!-- Navigation bar-->
+        <nav id="navigation">
+
+            <a href="index.html"> Home </a>
+            <a href="projects.html"> Projects </a>
+            <a href="about.html"> About </a>
+            <a href="contact.html"> Contact </a>
+            <a id="resume" href="https://docs.google.com/document/d/1i5CHPTLoUeXdabAKHejeOzc8EcxaCZQhpd3zIt7ptcw/edit?usp=sharing"> Resume </a>
+
+
+
+            <!-- Dropdown for if the screen is too small to fit a navbar-->
+            <select onchange="location = this.options[this.selectedIndex].value;">
+                <option value="" selected="selected">Select </option>
+                <option value="index.html">Home</option>
+                <option value="projects.html">Projects</option>
+                <option value="about.html">About</option>
+                <option value="contact.html">Contact</option>
+                <option value="resume.html">Resume</option>
+
+            </select>
+        </nav>
+        <!-- Navigation bar end-->
+        <!-- Title-->
+
+        <h1 class="title">
+            I'm Jack Fletcher.
+            <br /> <a style="color: white" id="titleHover" href="#Skills">Software Engineer and Game Designer.</a>
+            <hr />
+        </h1>
+
+        <!-- Title end-->
+    </section>
+    <!-- Skills Section-->
+    <section class="pagecontainer">
+
+        <section id="Skills">
+
+
+            <header>
+                <h1>Technical Skills</h1>
+            </header>
+            <hr width="250px" />
+            <div class="Skills">
+
+                <div class="Tools">
+                    <h2> Tools</h2>
+                    <ul>
+                        <li> Unity Engine </li>
+                        <li> SteamVR</li>
+                        <li> HtmlAgilityPack </li>
+                    </ul>
+                </div>
+                <div class="Software">
+                    <h2> Software</h2>
+                    <ul>
+                        <li> Windows & Linux</li>
+                        <li> Git</li>
+                        <li> Blender</li>
+                        <li> 3DS Max </li>
+                        <li> Adobe Photoshop</li>
+
+
+                    </ul>
+                </div>
+                <div class="Languages">
+                    <h2> Languages</h2>
+                    <ul>
+                        <li> C#</li>
+                        <li> C++</li>
+                        <li> Javascript</li>
+                        <li> Java</li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <!-- End Skills Section-->
+
+</body>
+
+</html>
