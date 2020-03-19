@@ -354,10 +354,11 @@ ul {
 }
 
 .card__title {
-    background-color: white;
+    background-color: rgba(119, 113, 113, 0.1);
+    ;
     text-align: center;
-    font-size: 1.2em;
-    color: black;
+    font-size: 1.8em;
+    color: white;
 }
 
 .card__image {
@@ -385,9 +386,9 @@ ul {
     padding: 5px;
     display: flex;
     justify-content: space-between;
-    background: #eeeeee;
+    background: rgba(119, 113, 113, 0.3);
     font-size: 0.8em;
-    border-bottom: 2px solid #cccccc;
+    border-bottom: 2px solid rgba(119, 113, 113, 0.1);
 }
 
 .card__info>a>button {
