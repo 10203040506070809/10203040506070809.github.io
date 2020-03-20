@@ -100,8 +100,8 @@ nav ul li:hover>ul {
 }
 
 .mugshot {
-    position: absolute;
-    float: right;
+    position: relative;
+    float: left;
 }
 
 .circle {
@@ -167,16 +167,30 @@ nav ul li:hover>ul {
     width: 200px;
 }
 
+#About {
+    margin: 0 auto;
+    width: 100%;
+    overflow: auto;
+}
+
 #About hr {
     width: 200px;
 }
 
-#About p {
+.col3 {
+    width: 33.33333%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.col3 h2 {
     text-align: center;
 }
 
 .pagecontainer {
     min-height: 100%;
+    min-width: 100%;
     position: relative;
     height: 100vh;
     width: 100%;
@@ -187,30 +201,6 @@ nav ul li:hover>ul {
     width: 100%;
     text-align: center;
     position: relative;
-}
-
-.Skills {
-    width: 100%;
-    display: inline-block;
-}
-
-.Tools {
-    width: 33%;
-    float: left;
-}
-
-.Languages {
-    width: 33%;
-    float: left;
-}
-
-.Software {
-    width: 33%;
-    float: left;
-}
-
-#titleHover:hover {
-    color: orange;
 }
 
 
@@ -238,10 +228,8 @@ ul {
     display: inline-block;
 }
 
-.hidden {
-    display: none;
-    opacity: 0;
-}
+
+/*  Start Wave animation */
 
 @keyframes move_wave {
     0% {
@@ -254,9 +242,6 @@ ul {
         transform: translateX(-50%) translateZ(0) scaleY(1)
     }
 }
-
-
-/*  Start Wave animation */
 
 .waveWrapper {
     overflow: hidden;
@@ -412,4 +397,30 @@ ul {
 .linkdiv>a>button:hover {
     color: black;
     background-color: orange;
+}
+
+.grid-container {
+    width: 66%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.about1 {
+    grid-row: 1 / span 2;
+    margin: auto;
+}
+
+.about2 {
+    text-align: center;
+}
+
+.about3 {
+    text-align: center;
 }
