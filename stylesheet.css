@@ -87,7 +87,7 @@ nav ul a {
 nav ul ul {
     display: none;
     position: absolute;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(24, 24, 24, 1);
     width: 100%;
 }
 
