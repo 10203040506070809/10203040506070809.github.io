@@ -10,7 +10,8 @@ html {
 header {}
 
 footer {
-    margin-bottom: 50px;
+    padding-top: 50px;
+    float: right;
 }
 
 body {
@@ -423,4 +424,18 @@ ul {
 
 .about3 {
     text-align: center;
+}
+
+#contact {
+    padding-top: 50px;
+}
+
+.formdiv {
+    display: block;
+    text-align: center;
+}
+
+#contactform {
+    display: inline-block;
+    margin: 0 auto;
 }
