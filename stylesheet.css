@@ -1,520 +1,278 @@
-/* TODO: Design for mobile first, desktop after. This means replacing max-width with min-width.*/
-
-html {
+:root {
+    font-size: 16px;
+    font-family: sans-serif;
     scroll-behavior: smooth;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-}
 
-header {}
-
-footer {
-    padding-top: 50px;
-    float: right;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
 }
 
 body {
-    font-family: sans-serif;
-    background-color: rgb(40, 40, 40);
-    color: white;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-}
-
-h1 {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 30px;
-}
-
-h2 {
-    font-size: 25px;
-}
-
-p {
-    font-size: 20px;
-    text-align: center;
-}
-
-
-/* Navigation Bar Start*/
-
-#navigation {
-    background-color: rgb(27, 27, 30);
-    margin: 0;
-    width: 100%;
-    z-index: 999;
-    border-bottom: 2px solid darkslategrey;
-}
-
-nav ul {
-    position: relative;
+    color: black;
+    background-color: #2f2f35;
     margin: 0;
     padding: 0;
-    z-index: 1;
+}
+
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.navbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 200ms ease;
+
+}
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link { 
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg {
+    width: 2rem;
+    min-width: rem;
+    margin: 0 1.5rem;
+}
+
+
+.logo {
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2ch;
+    width: 100%;
+}
+
+.logo svg {
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed)
+}
+
+.navbar:hover .logo svg {
+    transform: rotate(-180deg);
+}
+
+.custom-header-image{
+    margin: 0;
+    padding: 0;
+    position:relative;
+    text-align: center;
+    z-index:-1;
+}
+
+.custom-header {
+    margin-bottom: 50px;
+}
+.box-shadow {
+    box-shadow: 10px 10px;
+}
+.centered-text{
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+}
+
+.section {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    margin-top:0px;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: white;
+    padding: 150px;
     
 }
 
-nav ul a {
-    color: white;
+.small-section {
+    width: 50%;
+    background-color: white;
+    overflow: hidden;
+    margin-top:50px;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner-container h1{
+    margin-bottom: 30px;
     font-size: 30px;
-    display: block;
-    text-decoration: none;
-    padding: 10px 15px;
+    font-weight: 900;
 }
 
-.menu-item {
-    position: relative;
-    display: inline-block;
-    list-style-type: none;
+.center {
     text-align: center;
 }
-
-.submenu-item a {
-    font-size: 15px;
-    word-wrap: break-word;
+.text {
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+    font-size:1rem;
 }
 
-.menu-item:hover .item {
-    color: skyblue;
-}
-
-.submenu-item:hover a {
-    color: skyblue;
-}
-
-nav ul ul {
-    display: none;
-    position: absolute;
-    background: rgba(24, 24, 24, 1);
-    width: 100%;
-}
-
-nav ul ul li {
-    width: 100%;
-    display: inline-block;
-}
-
-nav ul li:hover>ul {
-    display: block;
-}
-
-.mugshot {
-    position: relative;
-    float: left;
-}
-
-.circle {
-    border-radius: 20%;
-}
-
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.vertical-center{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-
-.sticky+.content {
-    padding-top: 60px;
-}
-
-
-/* Navigation Bar End*/
-
-
-/*  If the screen is less than 800px, this happens*/
-
-@media (max-width: 800px) {
-    #navigation a {
-        font-size: 12px;
-    }
-    .title {
-        font-size: 20px;
-    }
-    .Skills h2 {
-        font-size: 20px;
-    }
-    .Skills li {
-        font-size: 15px;
-    }
-    section ul li {
-        font-size: 15px;
-    }
-}
-
-.sectionTitle:hover {
-    color: skyblue;
-}
-
-
-/*  End If the screen is less than 800px, this happens*/
-
-.title {
-    text-align: center;
-    position: relative;
-    top: 40%;
-}
-
-.title hr {
-    width: 200px;
-}
-
-#About {
-    margin: 0 auto;
-    width: 100%;
-    overflow: auto;
-}
-
-#About hr {
-    width: 200px;
-}
-
-.col3 {
-    width: 33.33333%;
-    float: left;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.col3 h2 {
-    text-align: center;
-}
-
-.pagecontainer {
-    min-height: 100%;
-    min-width: 100%;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    z-index: 1;
-}
-
-#Skills {
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
-
-
-/*Makes videos stay 16:9 at different resolutions*/
-
-.video-container {
-    position: relative;
-    /* Sets the aspect ratio, 56.25 is 16:9*/
-    padding-bottom: 56.25%;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-/*End Makes videos stay 16:9 at different resolutions*/
-
-ul {
-    text-align: left;
-    display: inline-block;
-}
-
-
-/*  Start Wave animation */
-
-@keyframes move_wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1)
-    }
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-}
-
-.waveWrapper {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-    z-index: 0;
-}
-
-.waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
-}
-
-.bgTop {
-    z-index: 15;
-    opacity: 0.5;
-}
-
-.bgMiddle {
-    z-index: 10;
-    opacity: 0.75;
-}
-
-.bgBottom {
-    z-index: 5;
-}
-
-.wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-}
-
-.waveTop {
-    background-size: 50% 100px;
-}
-
-.waveAnimation .waveTop {
-    animation: move-wave 3s;
-    -webkit-animation: move-wave 3s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-}
-
-.waveMiddle {
-    background-size: 50% 120px;
-}
-
-.waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
-}
-
-.waveBottom {
-    background-size: 50% 100px;
-}
-
-.waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
-}
-
-
-/*  End Wave animation */
-
-#projects {
-    float: left;
-}
-
-.cards {
-    /* Center cards on webpage */
-    margin: 0 auto;
-    /* Set maximum width*/
-    max-width: 1500px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
-    grid-auto-rows: auto;
-    padding-top: 30px;
-    gap: 20px;
-    font-family: sans-serif;
-}
-
-.card {
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-}
-
-.card__title {
-    background-color: rgba(119, 113, 113, 0.1);
-    ;
-    text-align: center;
-    font-size: 1.8em;
-    color: white;
-}
-
-.card__image {
-    height: 325px;
-    width: 100%;
-    display: block;
-}
-
-.card__content {
-    line-height: 1.5;
-    font-size: 0.9em;
-    padding: 15px;
-    background: rgba(119, 113, 113, 0.1);
-}
-
-.card__content>p:first-of-type {
-    margin-top: 0;
-}
-
-.card__content>p:last-of-type {
-    margin-bottom: 0;
-}
-
-.card__info {
-    padding: 5px;
+.skills {
     display: flex;
     justify-content: space-between;
-    background: rgba(119, 113, 113, 0.3);
-    font-size: 0.8em;
-    border-bottom: 2px solid rgba(119, 113, 113, 0.1);
+    font-size: 1rem;
+    font-weight: 900;
 }
 
-.card__info>a>button {
-    font-size: 20px;
-    border-radius: 15px;
-    border: none;
-    background-color: rgba(92, 92, 92, 0.8);
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 15px;
-    cursor: pointer;
-}
-
-.linkdiv>a>button {
+.bluebox{
+    background-color: #234099;
     color: white;
-    background-color: rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    cursor: pointer;
 }
 
-.linkdiv>a>button:hover {
-    color: skyblue;
-    background-color: sky;
+#education {
+    background-image: url(assets/images/hoe.jpg);
+}
+span a {
+    color: black;
 }
 
-.grid-container {
-    width: 66%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-    grid-gap: 10px;
-    padding: 10px;
+.stroke {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.grid-item {
-    text-align: center;
+.project-ico-right{
+    float: right;
+    color: black;
+}
+.project-ico-left{
+    float: left;
+    color: black;
 }
 
-.about1 {
-    grid-row: 1 / span 2;
-    margin: auto;
+.flex-img {
+    max-width: 50%;
 }
-
-.about2 {
-    text-align: center;
-}
-
-.about3 {
-    text-align: center;
-}
-
-#contact {
-    padding-top: 50px;
-}
-
-.formdiv {
-    display: block;
-    text-align: center;
-}
-
-#contactform {
-    display: inline-block;
-    margin: 0 auto;
-}
-
-.fade-in {
-    animation: fadeIn ease 5s;
-    -webkit-animation: fadeIn ease 5s;
-    -moz-animation: fadeIn ease 5s;
-    -o-animation: fadeIn ease 5s;
-    -ms-animation: fadeIn ease 5s;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
+/* Small Screens */ 
+@media only screen and (max-width: 800px)
+{
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 4rem;
     }
-    100% {
-      opacity:1;
+
+    .logo {
+        display: none;
     }
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-o-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-  }
+
+    .navbar-nav {
+        flex-direction: row;
+      }
+
+      .nav-link {
+        justify-content: center;
+      }
+      main {
+        margin: 0;
+      }
+
+      .section {
+          background-size: 100%;
+          padding: 100px 0px;
+      }
+      .inner-container{
+          padding: 60px;
+      }
+
+      span a {
+          font-size:0.5rem;
+      }
+
+      .flex-img {
+          display: none;
+      }
 }
 
-  .bgblack{
-      background-color: #1A1A1D;
-  }
+/* Large Screens */ 
 
-  .bggrey{
-    background-color: #4E4E50;
-    
-  }
+@media only screen and (min-width: 800px)
+{
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
 
-  .bgcrimson{
-    background-color: #6F2232;
-  }
+    .site-title {
+        font-size: 5rem;
+    }
+    .site-desc {
+        font-size: 2rem;
+    }
+    .navbar:hover{
+        width: 16rem;
+    }
 
-  .bgpink {
-    background-color: #950740;
-  }
-
-  .bgred{
-      background-color: #C3073F
-  }
+    .navbar:hover .link-text {
+        display: block;
+    }
+    .inner-container{
+        padding: 80px;
+    }
+}
